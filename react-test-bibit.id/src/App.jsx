@@ -33,7 +33,7 @@ function App() {
       <div className='row'>
         <MovieListHeading headling='movies' />
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
-        {selectedMovie && <MovieInfo selectedMovie={selectedMovie} />}
+        {selectedMovie && <MovieInfo selectedMovie={selectedMovie} onMovieSelect={onMovieSelect} />}
       </div>
       <div className='row'>
         <div className='col'>

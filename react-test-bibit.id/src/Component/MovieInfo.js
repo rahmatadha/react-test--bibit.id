@@ -22,6 +22,7 @@ const MovieInfo = (props) => {
             <span className='movieInfo'>Directo : <span>Jon Favreau</span></span>
             <span className='movieInfo'>Plot : <span>After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.</span></span>
             </div>
+            <span className='closeSpan' onClick={() => props.onMovieSelect()}>x</span>
         </div>
         </>
     )

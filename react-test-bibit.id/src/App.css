@@ -46,7 +46,17 @@
 .movieInfo > span{
   opacity: 0.5;
 }
-
+.closeSpan{
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  height: fit-content;
+  padding: 8px;
+  border-radius: 50%;
+  border-color: 1px solid white;
+  cursor: pointer;
+  opacity: 0.8;
+}
 body{
   background: #141414;
   color: #ffffff;
