@@ -5,10 +5,12 @@ import 'bootstrap/dist/css/bootstrap.css';
 import MovieList from './Component/MovieList';
 import MovieListHeading from './Component/MovieLIstHeadling';
 import SearchBox from './Component/SeacrhBox';
+import MovieInfo from './Component/MovieInfo';
 
 function App() {
   const [ movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState ("");
+  const [ selectedMovie, onMovieSelect] = useState();
 
   const getMovieRequest = async (searchValue) => {
     const url =`http://www.omdbapi.com/?s=${searchValue}&apikey=a6b41fb0`;
@@ -31,10 +33,11 @@ function App() {
       <div className='row'>
         <MovieListHeading headling='movies' />
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
+        {selectedMovie && <MovieInfo selectedMovie={selectedMovie} />}
       </div>
       <div className='row'>
         <div className='col'>
-        <MovieList movies={movies} />
+        <MovieList movies={movies} onMovieSelect={onMovieSelect} data-bs-toggle="modal" data-bs-target="#exampleModal" />
         </div>
       
       </div>
